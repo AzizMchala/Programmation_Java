@@ -1,25 +1,32 @@
-# 🐯 Programmation Java - Prosit 3
+# 🐯 Programmation Java - Prosit 4
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![OOP](https://img.shields.io/badge/Object--Oriented-Programming-blue?style=for-the-badge)
 
 ## 📌 Description
-Ce projet illustre les concepts fondamentaux de la **programmation orientée objet en Java** à travers un exemple simple et pédagogique.  
-Il met en avant :
-- La **création de classes et objets**
-- L’**encapsulation** et les **attributs/méthodes**
-- Les **constructeurs**
-- La **gestion de projets** en Java avec IntelliJ IDEA
+Ce projet poursuit l’évolution de **ProSit 3** en Java et met en place des améliorations demandées par le chef d’équipe :
+- Ajout de nouvelles règles métier
+- Encapsulation renforcée
+- Organisation en packages
 
-## 🚀 Contenu
- prosit4
-- `tn.esprit.gestionzoo.entities.Zoo.java` : classe de gestion d’un zoo.
-- `Zoo.java` : classe de gestion d’un zoo.
- prosit3
-- `ZooManagement.java` : point d’entrée du programme.
+## 🚀 Nouveautés par rapport à Prosit 3
+### ✅ Instruction 17
+La méthode `addAnimal()` intègre désormais la méthode `isZooFull()` afin de vérifier si le zoo a encore de la place avant d’ajouter un animal.
+
+### ✅ Instruction 18
+Application des principes d’encapsulation :
+- L’âge d’un animal **ne peut pas être négatif**.
+- Le nom d’un zoo **ne doit pas être vide**.
+
+Ces règles sont appliquées via des **setters sécurisés**.
+
+### ✅ Instruction 19
+Réorganisation du projet avec des packages pour plus de clarté :
+- `tn.esprit.gestionzoo.entities` → contient les classes `Zoo`, `Animal`, etc.
+- `tn.esprit.gestionzoo.main` → contient la classe `ZooManagement` (point d’entrée du programme).
 
 ## 🎨 Design
-Le projet adopte un style simple et clair, conçu pour l’apprentissage des bases de la POO en Java.
+Le projet garde un style simple et clair, mais mieux organisé grâce à la hiérarchie des packages.
 
 ## 👨‍💻 Auteur
 **Mohamed Aziz Mchala**  
@@ -30,3 +37,5 @@ Le projet adopte un style simple et clair, conçu pour l’apprentissage des bas
 ## ⚙️ Technologies
 - **Java (JDK 17 ou supérieur recommandé)**
 - **IntelliJ IDEA** pour le développement
+- **GitHub** pour le suivi des versions
+

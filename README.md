@@ -12,7 +12,10 @@ Il met en avant :
 - La **gestion de projets** en Java avec IntelliJ IDEA
 
 ## 🚀 Contenu
+ prosit4
 - `tn.esprit.gestionzoo.entities.Zoo.java` : classe de gestion d’un zoo.
+- `Zoo.java` : classe de gestion d’un zoo.
+ prosit3
 - `ZooManagement.java` : point d’entrée du programme.
 
 ## 🎨 Design

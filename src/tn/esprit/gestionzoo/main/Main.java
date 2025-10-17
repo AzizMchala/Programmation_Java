@@ -1,6 +1,10 @@
 package tn.esprit.gestionzoo.main;
 import tn.esprit.gestionzoo.entities.Animal;
 import tn.esprit.gestionzoo.entities.Zoo;
+import tn.esprit.gestionzoo.entities.Aquatic;
+import tn.esprit.gestionzoo.entities.Terrestrial;
+import tn.esprit.gestionzoo.entities.Dolphin;
+import tn.esprit.gestionzoo.entities.Penguin;
 public class Main {
     public static void main(String[] args) {
 
@@ -53,6 +57,19 @@ public class Main {
         //myZoo.removeAnimal(girafe);
         /*z1.isZooFull();*/
 
+        Aquatic aquatic = new Aquatic("Poisson", "Poisson Rouge", 1, false, "Bassin");
+        Terrestrial terrestrial = new Terrestrial("Canidé", "Chien", 3, true, 4);
+        Dolphin dolphin = new Dolphin("Delphinidé", "Flipper", 6, true, "Océan", 35.5f);
+        Penguin penguin = new Penguin("Sphéniscidé", "Pingouin", 4, false, "Banquise", 120.0f);
+
+        System.out.println(aquatic);
+        System.out.println(terrestrial);
+        System.out.println(dolphin);
+        System.out.println(penguin);
+
+        aquatic.swim();
+        dolphin.swim();
+        penguin.swim();
 
     }
 }

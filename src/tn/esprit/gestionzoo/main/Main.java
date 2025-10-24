@@ -48,6 +48,16 @@ public class Main {
         zoo2.addAnimal(lion);
         zoo2.addAnimal(elephant);
         zoo2.addAnimal(lapin);
+
+        // Ajout d'animaux aquatiques
+        Dolphin dolphin = new Dolphin("Delphinidae", "Flipper", 8, true, "Mer", 25.5f);
+        Penguin penguin = new Penguin("Spheniscidae", "Pingouin", 4, false, "Antarctique", 10.0f);
+        zoo2.addAquaticAnimal(dolphin);
+        zoo2.addAquaticAnimal(penguin);
+
+        // Affichage de la méthode swim() pour tous les animaux aquatiques
+        zoo2.displayAquaticAnimalsSwim();
+
         System.out.println("Nom du zoo : " + zoo2);
         /*int test=myZoo.searchAnimal(lion);
         System.out.println(test);
@@ -57,19 +67,16 @@ public class Main {
         //myZoo.removeAnimal(girafe);
         /*z1.isZooFull();*/
 
-        Aquatic aquatic = new Aquatic("Poisson", "Poisson Rouge", 1, false, "Bassin");
         Terrestrial terrestrial = new Terrestrial("Canidé", "Chien", 3, true, 4);
-        Dolphin dolphin = new Dolphin("Delphinidé", "Flipper", 6, true, "Océan", 35.5f);
-        Penguin penguin = new Penguin("Sphéniscidé", "Pingouin", 4, false, "Banquise", 120.0f);
+        Dolphin dolphin2 = new Dolphin("Delphinidé", "Flipper", 6, true, "Océan", 35.5f);
+        Penguin penguin2 = new Penguin("Sphéniscidé", "Pingouin", 4, false, "Banquise", 120.0f);
 
-        System.out.println(aquatic);
         System.out.println(terrestrial);
-        System.out.println(dolphin);
-        System.out.println(penguin);
+        System.out.println(dolphin2);
+        System.out.println(penguin2);
 
-        aquatic.swim();
-        dolphin.swim();
-        penguin.swim();
+        dolphin2.swim();
+        penguin2.swim();
 
     }
 }

@@ -5,7 +5,7 @@ public class Zoo {
     private Aquatic[] aquaticAnimals = new Aquatic[10];
     private String name;
     private String city;
-    private static final int nbrCages = 25;
+    private static final int nbrCages = 3;
     int nbrAnimals;
     private int nbrAquaticAnimals = 0;
 
@@ -60,19 +60,16 @@ public class Zoo {
         return sb.toString();
     }
 
-    public boolean addAnimal(Animal animal) {
-        if (isZooFull()) {
-            System.out.println("zoo est plein !");
-            return false;
+    public void addAnimal(Animal animal) throws ZooFullException {
+        if (nbrAnimals >= animals.length) {
+            throw new ZooFullException("zoo est plein !");
         }
         if (searchAnimal(animal) != -1) {
             System.out.println("tn.esprit.gestionzoo.entities.Animal present : " + animal.getName());
-            return false;
+            return;
         }
         animals[nbrAnimals] = animal;
         nbrAnimals++;
-
-        return true;
     }
 
     public int searchAnimal(Animal animal) {

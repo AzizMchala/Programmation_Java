@@ -185,5 +185,30 @@ public class Main {
         } catch (ZooFullException e) { System.out.println(e.getMessage()); }
         System.out.println("Count dupZoo (dup attempt): " + dupZoo.compterAnimaux());
 
+
+
+        System.out.println("Terrestrial tests:");
+        terrestrial.eatMeat(tn.esprit.gestionzoo.entities.Food.MEAT);
+        terrestrial.eatMeat(tn.esprit.gestionzoo.entities.Food.PLANT);
+        terrestrial.eatMeat(tn.esprit.gestionzoo.entities.Food.BOTH);
+        terrestrial.eatPlant(tn.esprit.gestionzoo.entities.Food.PLANT);
+        terrestrial.eatPlant(tn.esprit.gestionzoo.entities.Food.MEAT);
+        terrestrial.eatPlant(tn.esprit.gestionzoo.entities.Food.BOTH);
+        terrestrial.eatPlantAndMeet(tn.esprit.gestionzoo.entities.Food.BOTH);
+        terrestrial.eatPlantAndMeet(tn.esprit.gestionzoo.entities.Food.MEAT);
+        terrestrial.eatPlantAndMeet(tn.esprit.gestionzoo.entities.Food.PLANT);
+
+
+        System.out.println("\nDolphin tests:");
+        dolphin2.eatMeat(tn.esprit.gestionzoo.entities.Food.MEAT);
+        dolphin2.eatMeat(tn.esprit.gestionzoo.entities.Food.PLANT);
+        dolphin2.eatMeat(tn.esprit.gestionzoo.entities.Food.BOTH);
+
+       
+        System.out.println("\nPenguin tests:");
+        penguin2.eatMeat(tn.esprit.gestionzoo.entities.Food.MEAT);
+        penguin2.eatMeat(tn.esprit.gestionzoo.entities.Food.PLANT);
+        penguin2.eatMeat(tn.esprit.gestionzoo.entities.Food.BOTH);
+
     }
 }

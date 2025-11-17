@@ -9,3 +9,5 @@ public interface IGestion<T> {
     void trierEmployeParId(); // Comparable
     void trierEmployeParNomDépartementEtGrade(); // Comparator
 }
+
+

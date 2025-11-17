@@ -48,3 +48,5 @@ public class SocieteArrayList implements IGestion<Employe> {
                 .thenComparing(Employe::getGrade));
     }
 }
+
+

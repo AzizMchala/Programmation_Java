@@ -1,29 +1,50 @@
-# 🐯 Programmation Java - Prosit 3
+# Gestion Employés – Projet Java
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![OOP](https://img.shields.io/badge/Object--Oriented-Programming-blue?style=for-the-badge)
 
-## 📌 Description
-Ce projet illustre les concepts fondamentaux de la **programmation orientée objet en Java** à travers un exemple simple et pédagogique.  
-Il met en avant :
-- La **création de classes et objets**
-- L’**encapsulation** et les **attributs/méthodes**
-- Les **constructeurs**
-- La **gestion de projets** en Java avec IntelliJ IDEA
+## 📌 Présentation
+Ce projet propose un système complet de **gestion des employés et des départements** en Java, illustrant l'application des concepts avancés de la programmation orientée objet, la gestion des collections et l'encapsulation.
 
-## 🚀 Contenu
-- `tn.esprit.gestionzoo.entities.Zoo.java` : classe de gestion d’un zoo.
-- `ZooManagement.java` : point d’entrée du programme.
+## 💡 Fonctionnalités principales
+- **Gestion des employés** :
+  - Ajout, suppression et recherche d’employés
+  - Affichage formaté de la liste des employés
+  - Tri par identifiant, département et grade
+- **Gestion des départements** :
+  - Ajout, suppression et recherche de départements
+  - Affichage et tri dynamique des départements
+- **Structure évolutive** :
+  - Utilisation d’interfaces génériques et implémentation flexible avec `ArrayList` et `HashSet`
+  - Architecture claire par packages (`entities`, `main`)
+- **Pratiques POO avancées :**
+  - Encapsulation stricte des attributs
+  - Redéfinition de l’égalité (méthode `equals`)
 
-## 🎨 Design
-Le projet adopte un style simple et clair, conçu pour l’apprentissage des bases de la POO en Java.
+## 🏗️ Organisation du code
+- `tn.esprit.gestionemployes.Employe` – Entité employé
+- `tn.esprit.gestionemployes.SocieteArrayList` – Gestion des employés avec ArrayList
+- `tn.esprit.gestionemployes.Departement` – Entité département
+- `tn.esprit.gestionemployes.DepartementHashSet` – Gestion des départements avec HashSet
+- `Main.java` – Point d’entrée et démonstration des fonctionnalités
+
+## 🚀 Démarrage rapide
+1. Cloner le projet
+2. Ouvrir dans IntelliJ IDEA ou tout IDE compatible
+3. S’assurer d’avoir **JDK 17+**
+4. Exécuter la classe `Main.java` pour tester les différentes opérations
 
 ## 👨‍💻 Auteur
 **Mohamed Aziz Mchala**  
-📧 Email : [azizmchela00@gmail.com](mailto:azizmchela00@gmail.com) | [Mohamedaziz.Mchala@esprit.tn](mailto:Mohamedaziz.Mchala@esprit.tn)  
-🔗 [Linktree - CodeMchala](https://linktr.ee/codeMchala?utm_source=linktree_profile_share&ltsid=94cf9b07-c1d7-4e33-a4bb-adce57d2ae0c)  
+📧 Email : azizmchela00@gmail.com | Mohamedaziz.Mchala@esprit.tn  
+🔗 [Linktree - CodeMchala](https://linktr.ee/codeMchala)  
 💼 [LinkedIn](https://www.linkedin.com/in/mohamed-aziz-mchala-89b063250/)
 
-## ⚙️ Technologies
-- **Java (JDK 17 ou supérieur recommandé)**
-- **IntelliJ IDEA** pour le développement
+## ⚙️ Stack Technique
+- Java (JDK 17 ou supérieur recommandé)
+- Collections Java (`ArrayList`, `HashSet`, `TreeSet`)
+- IntelliJ IDEA / tout IDE compatible
+
+---
+Ce dépôt sert à illustrer la modularité et la robustesse d’une application Java moderne pour la gestion des ressources humaines.
+

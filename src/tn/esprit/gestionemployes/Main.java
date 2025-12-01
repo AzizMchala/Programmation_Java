@@ -1,5 +1,7 @@
 package tn.esprit.gestionemployes;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         DepartementHashSet gestion = new DepartementHashSet();
@@ -17,6 +19,41 @@ public class Main {
 
         System.out.println("-- Liste après ajouts --");
         gestion.displayDepartement();
+
+        // ================== TESTS Etudiant et StudentManagement ====================
+        System.out.println("\n===== GESTION DES ETUDIANTS =====\n");
+        StudentManagement studentGestion = new StudentManagement();
+        List<Etudiant> etudiants = new java.util.ArrayList<>();
+        etudiants.add(new Etudiant(3, "Ali", 21));
+        etudiants.add(new Etudiant(1, "Sara", 22));
+        etudiants.add(new Etudiant(2, "Omar", 23));
+
+        // Affichage simple
+        System.out.println("-- Tous les étudiants :");
+        studentGestion.displayStudents(etudiants, e -> System.out.println(e));
+
+        // Affichage filtré (âge > 21)
+        System.out.println("\n-- Étudiants ayant plus de 21 ans :");
+        studentGestion.displayStudentsByFilter(etudiants, e -> e.getAge() > 21, e -> System.out.println(e));
+
+        // Récupération des noms
+        String noms = studentGestion.returnStudentsNames(etudiants, Etudiant::getNom);
+        System.out.println("\nNoms des étudiants : " + noms);
+
+        // Création d'un étudiant via Supplier
+        Etudiant nouveau = studentGestion.createStudent(() -> new Etudiant(4, "Amina", 20));
+        etudiants.add(nouveau);
+        System.out.println("\nAprès ajout d'Amina :");
+        studentGestion.displayStudents(etudiants, System.out::println);
+
+        // Tri par id
+        List<Etudiant> sorted = studentGestion.sortStudentsById(etudiants, java.util.Comparator.comparingInt(Etudiant::getId));
+        System.out.println("\nÉtudiants triés par id :");
+        sorted.forEach(System.out::println);
+
+        // Stream :
+        System.out.println("\nListe convertie en Stream (toString):");
+        studentGestion.convertToStream(etudiants).forEach(System.out::println);
 
         // Recherche par nom
         System.out.println("\nRecherche nom 'RH' : " + gestion.rechercherDepartement("RH"));
